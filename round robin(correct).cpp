@@ -26,7 +26,7 @@ int main() {
 	queue<process> process_queue;
 	//------------------------------
 
-	d = fopen("C:\\Users\\amn_n\\Documents\\refrence folders\\processes.txt", "r");
+	d = fopen("input.txt", "r");
 	while (EOF != (temp = getc(d)))
 		if ('\n' == temp)
 			process_count += 1;
@@ -35,7 +35,7 @@ int main() {
 
 
 	process* arr = (struct process*)malloc(sizeof(struct process) * process_count);
-	d = fopen("C:\\Users\\amn_n\\Documents\\refrence folders\\processes.txt", "r");
+	d = fopen("input2.txt", "r");
 	for (int i = 0; i < process_count; i++) {
 		fscanf(d, "%s %d %d", arr[i].pid, &arr[i].duration, &arr[i].arrival);
 		arr[i].start_time = -1;
